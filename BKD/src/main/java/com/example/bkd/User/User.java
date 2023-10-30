@@ -2,25 +2,29 @@ package com.example.bkd.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
-    @JsonProperty("id")
+
     private int id;
-    @JsonProperty("nume")
     private String nume;
-    @JsonProperty("age")
-    private int age;
+    private String prenume;
+    private String email;
+    private String parola;
 
     public User() {
     }
 
-    public User(int id, String nume, int age) {
+    public User(int id, String nume, String prenume, String email, String parola) {
         this.id = id;
         this.nume = nume;
-        this.age = age;
+        this.prenume = prenume;
+        this.email = email;
+        this.parola = parola;
     }
 
-    public User(String nume, int age) {
+    public User(String nume, String prenume, String email, String parola) {
         this.nume = nume;
-        this.age = age;
+        this.prenume = prenume;
+        this.email = email;
+        this.parola = parola;
     }
 
     public int getId() {
@@ -39,12 +43,28 @@ public class User {
         this.nume = nume;
     }
 
-    public int getAge() {
-        return age;
+    public String getPrenume() {
+        return prenume;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPrenume(String prenume) {
+        this.prenume = prenume;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getParola() {
+        return parola;
+    }
+
+    public void setParola(String parola) {
+        this.parola = parola;
     }
 
     @Override
@@ -52,7 +72,9 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", nume='" + nume + '\'' +
-                ", age=" + age +
+                ", prenume='" + prenume + '\'' +
+                ", email='" + email + '\'' +
+                ", parola='" + parola + '\'' +
                 '}';
     }
 }
