@@ -1,0 +1,4 @@
+functionalitate login
+username unic fara probleme
+email unic fara probleme
+etc
